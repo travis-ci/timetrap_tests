@@ -32,6 +32,11 @@ fi
 success "Got past endless printer"
 
 
+./bin/timetrap -t $TIMEOUT ruby ./scripts/ignores_sigterm.rb
+success "Got past script that ignores signals"
+
+
+
 ./bin/timetrap -t $TIMEOUT ./scripts/exits_with_0.sh
 if [ $? == 0 ]; then
     success "Successful exit code"
