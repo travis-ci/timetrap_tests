@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 while [ true ]; do
     echo "Hi, I am $$. I am supposed to run forever."

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 sleep 2
 exit 33
