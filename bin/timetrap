@@ -60,6 +60,11 @@ if (($# == 0 || interval <= 0)); then
     exit 1
 fi
 
+# $timeout is less than zero, it should be infinite loop 
+if [ $timeout -lt 0 ];then
+   timeout=2147483647
+fi
+
 # kill -0 pid   Exit code indicates if a signal may be sent to $pid process.
 (
     ((t = timeout))
